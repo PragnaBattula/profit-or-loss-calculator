@@ -25,17 +25,21 @@ function calculateProfitAndLoss(initial, quantity, current) {
         outputBox.style.color = "red";
         outputBox.innerText = "Uh oh! You lost " + lossPercentage.toFixed(2) + "% and your loss is ₹" + loss.toFixed(2) + " 😔";
 
-        
+
     } else if (current > initial) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
 
         outputBox.style.color = "green";
-        outputBox.innerText = "Congrats! You gained " + profitPercentage.toFixed(2) + "% and your profit is ₹" + profit.toFixed(2) + " 🤩";
-} else {
+        outputBox.innerText = "Congrats! You gained " + profitPercentage.toFixed(2) + "% and your profit is ₹" + profit.toFixed(2) + " 🤩🤑";
+
+    } 
+    else if(initial = current) {
+    outputBox.style.color = "black";
+    outputBox.innerText = "No profit, no loss, safe game 😉🤫";
+}
+else {
+    outputBox.style.color = "black";
     outputBox.innerText = "Please fill all the boxes";
 }
 }
-
-
-
